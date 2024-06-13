@@ -27,8 +27,8 @@ function App() {
         </section>
         <Register open={open} onClose={() => setOpen(false)} />
 
-        <section className='h-[180vh] px-8 sm:px-0 sm:w-[55%] flex flex-col items-center justify-center gap-4' id='about'>
-          <div className="flex flex-col sm:flex-row gap-4 h-[25%] min-h-56">
+        <section className='h-[180vh] px-8 sm:px-0 sm:w-[55%] flex flex-col items-center justify-center gap-8' id='about'>
+          <div className="flex flex-col sm:flex-row gap-4 h-[50%] sm:h-[35%] min-h-96 sm:min-h-64">
             <p className='text-3xl'>What is DOSES?</p>
             <p>Doses Fest 2024 is an electrifying celebration designed to inspire, empower, and connect young people. This dynamic festival brings together the different young minds for a day of unforgettable experiences. With a perfect blend of music, art,  and the word of God.
               To provide a platform for youth to explore  their potentials and God given talents while fostering meaningful connections that will propel them towards a brighter future.
@@ -36,7 +36,7 @@ function App() {
           </div>
 
 
-          <div className="flex flex-col sm:flex-row-reverse gap-4 h-[25%] min-h-56">
+          <div className="flex flex-col sm:flex-row-reverse gap-4 h-[50%] sm:h-[35%] min-h-96 sm:min-h-64">
             <p className='text-3xl'>Why should you come to DOSES?</p>
             <p>There will be Music performances, Rap, Visual art designs, skating competition, Fashion/drip check,  Dance, vibes and many moreeee
               Come ready to get high with the most high.
@@ -46,13 +46,13 @@ function App() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 h-[25%] min-h-56">
+          <div className="flex flex-col sm:flex-row gap-4 h-[50%] sm:h-[35%] min-h-96 sm:min-h-64">
             <p className='text-3xl'>Where is it happening?</p>
             <p>Freedom Park Old Prison Ground,1, Hospital Road, adjacent St' Nicholas Hospital, Lagos Island, Lagos
 
               <br />
               <br />
-              Be there by 11:00am sharp!.
+              Be there by 2:00pm sharp!.
             </p>
           </div>
           <div className="text-center"><button
@@ -69,7 +69,7 @@ function App() {
         <footer className='h-[15vh] w-[100%] flex flex-col justify-center items-center bg-slate-900 text-slate-50'>
           <p>doses logo</p>
           <p><small>© 2024 doses All rights reserved</small></p>
-          <p><small>A Performing Hearts Production</small></p>
+          {/* <p><small>A Performing Hearts Production</small></p> */}
         </footer>
       </main >
     </>
