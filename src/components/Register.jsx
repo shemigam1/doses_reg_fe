@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Close from './Close';
 
 function Register({ open, onClose }) {
 
@@ -95,11 +96,11 @@ function Register({ open, onClose }) {
                 transition-all ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}
                   w-[90vw] sm:w-[60vw]`}>
 
-                <img
-                    src='src\assets\close.svg'
-                    onClick={onClose}
-                    className='h-8 w-8 absolute top-2 right-3 text-xl rounded-full text-gray-600 hover:bg:gray-50 hover:text-gray-950 bg-red-500 px-2 hover:cursor-pointer hover:bg-slate-200'
-                />
+                <div onClick={onClose}
+                    className='h-12 w-12 absolute top-3 right-3 text-xl rounded-full px-2 hover:cursor-pointer'>
+                    <Close />
+
+                </div>
 
                 <form className='mt-4 flex flex-col gap-5 sm:gap-2' onSubmit={handleSubmit}>
                     <div className="flex flex-col sm:w-[70%] gap-1 sm:gap-0">
