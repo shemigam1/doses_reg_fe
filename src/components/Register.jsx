@@ -242,7 +242,7 @@ function Register({ open, onClose }) {
                             <div className="flex gap-3">
                                 <input
                                     type="radio"
-                                    name="member"
+                                    name="daystarMember"
                                     id="yes"
                                     onChange={handleChange}
                                     value={true}
@@ -252,7 +252,7 @@ function Register({ open, onClose }) {
                             <div className="flex gap-3">
                                 <input
                                     type="radio"
-                                    name="member"
+                                    name="daystarMember"
                                     id="no"
                                     onChange={handleChange}
                                     value={false}
