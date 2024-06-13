@@ -86,19 +86,20 @@ function Register({ open, onClose }) {
 
     return (
         <section onClick={onClose}
-            className={`fixed inset-0 flex justify-center 
+            className={`fixed inset-0 flex justify-center
             items-center transition-colors ${open ? "visible bg-black/20" : "invisible"}`}>
 
             <div
                 onClick={e => e.stopPropagation()}
-                className={`bg-white rounded-xl shadow p-6 
+                className={`bg-white rounded-xl shadow p-6 overflow-auto max-h-[90vh] 
                 transition-all ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}
-                h-[95vh] w-[90vw] sm:w-[60vw]`}>
+                  w-[90vw] sm:w-[60vw]`}>
 
-                <button
+                <img
+                    src='src\assets\close.svg'
                     onClick={onClose}
-                    className='absolute top-2 right-3 text-xl rounded-full text-gray-600 hover:bg:gray-50 hover:text-gray-950 bg-red-500 px-2 pb-1'
-                >go back</button>
+                    className='h-8 w-8 absolute top-2 right-3 text-xl rounded-full text-gray-600 hover:bg:gray-50 hover:text-gray-950 bg-red-500 px-2 hover:cursor-pointer hover:bg-slate-200'
+                />
 
                 <form className='mt-4 flex flex-col gap-5 sm:gap-2' onSubmit={handleSubmit}>
                     <div className="flex flex-col sm:w-[70%] gap-1 sm:gap-0">
@@ -124,90 +125,92 @@ function Register({ open, onClose }) {
                             className='border border-gray-900 rounded-full focus:outline-none px-2' />
                     </div>
 
-                    <div className="flex justify-between gap-4">
+                    {/* <div className="flex justify-between gap-4"> */}
 
 
-                        <div className="flex flex-col w-[50%] gap-2 sm:gap-0">
+                    <div className="flex flex-col w-[70%] gap-2 sm:gap-0">
 
-                            <label htmlFor="">Whatsapp Number</label>
+                        <label htmlFor="">Whatsapp Number</label>
+                        <input
+                            className='border border-gray-900 rounded-full focus:outline-none px-2'
+                            type="text"
+                            name="whatsappNumber"
+                            value={userData.whatsappNumber}
+                            onChange={handleChange}
+
+                            id="" />
+                    </div>
+                    <div className="flex flex-col w-[50%] justify-start">
+
+                        <label htmlFor="">Age</label>
+                        <select
+                            className='p-2'
+                            name="ageRange" id="" onChange={handleChange} value={userData.ageRange} required>
+                            <option value="15-20" selected="selected">15 - 20 years</option>
+                            <option value="21-25">21 - 25 years</option>
+                            <option value="26-35">26 - 35 years</option>
+                            <option value="35+">35 years and above</option>
+                        </select>
+                    </div>
+                    {/* </div> */}
+
+                    {/* <div className="flex justify-between gap-4"> */}
+
+
+                    <div className="flex flex-col w-[50%]">
+
+                        <p>Gender</p>
+                        <div className="flex gap-3">
+
                             <input
-                                className='border border-gray-900 rounded-full focus:outline-none px-2'
-                                type="text"
-                                name="whatsappNumber"
-                                value={userData.whatsappNumber}
+                                type="radio"
+                                name="gender"
+                                id="male"
                                 onChange={handleChange}
-
-                                id="" />
+                                value={'male'}
+                                required />
+                            <label htmlFor="">Male</label>
                         </div>
-                        <div className="flex flex-col w-[50%] justify-start">
+                        <div className="flex gap-3">
 
-                            <label htmlFor="">Age</label>
-                            <select name="ageRange" id="" onChange={handleChange} value={userData.ageRange} required>
-                                <option value="15-20" selected="selected">15 - 20 years</option>
-                                <option value="21-25">21 - 25 years</option>
-                                <option value="26-35">26 - 35 years</option>
-                                <option value="35+">35 years and above</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div className="flex justify-between gap-4">
-
-
-                        <div className="flex flex-col w-[50%]">
-
-                            <p>Gender</p>
-                            <div className="flex gap-3">
-
-                                <input
-                                    type="radio"
-                                    name="gender"
-                                    id="male"
-                                    onChange={handleChange}
-                                    value={'male'}
-                                    required />
-                                <label htmlFor="">Male</label>
-                            </div>
-                            <div className="flex gap-3">
-
-                                <input
-                                    type="radio"
-                                    name="gender"
-                                    id="female"
-                                    onChange={handleChange}
-                                    value={'female'}
-                                    required />
-                                <label htmlFor="">Female</label>
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col w-[50%] justify-start">
-
-                            <p>Location</p>
-                            <div className="flex gap-3">
-
-                                <input
-                                    type="radio"
-                                    name="location"
-                                    id="mainland"
-                                    onChange={handleChange}
-                                    value={'mainland'}
-                                    required />
-                                <label htmlFor="">Mainland</label>
-                            </div>
-                            <div className="flex gap-3">
-
-                                <input
-                                    type="radio"
-                                    name="location"
-                                    id="island"
-                                    onChange={handleChange}
-                                    value={'island'}
-                                    required />
-                                <label htmlFor="">Island</label>
-                            </div>
+                            <input
+                                type="radio"
+                                name="gender"
+                                id="female"
+                                onChange={handleChange}
+                                value={'female'}
+                                required />
+                            <label htmlFor="">Female</label>
                         </div>
                     </div>
+
+                    <div className="flex flex-col w-[50%] justify-start">
+
+                        <p>Location</p>
+                        <div className="flex gap-3">
+
+                            <input
+                                type="radio"
+                                name="location"
+                                id="mainland"
+                                onChange={handleChange}
+                                value={'mainland'}
+                                required />
+                            <label htmlFor="">Mainland</label>
+                        </div>
+                        <div className="flex gap-3">
+
+                            <input
+                                type="radio"
+                                name="location"
+                                id="island"
+                                onChange={handleChange}
+                                value={'island'}
+                                required />
+                            <label htmlFor="">Island</label>
+                        </div>
+                    </div>
+                    {/* </div> */}
 
                     <div className="flex flex-col sm:w-[70%] gap-2 sm:gap-0">
 
@@ -222,91 +225,93 @@ function Register({ open, onClose }) {
                             className='border border-gray-900 rounded-full focus:outline-none px-2' />
                     </div>
 
-                    <div className="flex justify-between gap-4">
+                    {/* <div className="flex justify-between gap-4"> */}
 
 
-                        <div className="flex flex-col w-[50%]">
-                            <label htmlFor="">Career</label>
-                            <select name="career" onChange={handleChange} value={userData.career} required id="">
-                                <option value="student" selected="selected">Student</option>
-                                <option value="self-employed">Self-employed</option>
-                                <option value="employed">Employed</option>
-                                <option value="unemployed">Unemployed</option>
-                            </select>
-                        </div>
-
-                        <div className="flex flex-col w-[50%] justify-start">
-
-
-                            <p>Are you a member of Daystar?</p>
-                            <div className="flex gap-3">
-                                <input
-                                    type="radio"
-                                    name="daystarMember"
-                                    id="yes"
-                                    onChange={handleChange}
-                                    value={true}
-                                    required />
-                                <label htmlFor="">Yes</label>
-                            </div>
-                            <div className="flex gap-3">
-                                <input
-                                    type="radio"
-                                    name="daystarMember"
-                                    id="no"
-                                    onChange={handleChange}
-                                    value={false}
-                                    required />
-                                <label htmlFor="">No</label>
-                            </div>
-                        </div>
+                    <div className="flex flex-col w-[50%]">
+                        <label htmlFor="">Career</label>
+                        <select
+                            className='p-2'
+                            name="career" onChange={handleChange} value={userData.career} required id="">
+                            <option value="student" selected="selected">Student</option>
+                            <option value="self-employed">Self-employed</option>
+                            <option value="employed">Employed</option>
+                            <option value="unemployed">Unemployed</option>
+                        </select>
                     </div>
 
-                    <div className="flex justify-between gap-4">
+                    <div className="flex flex-col w-[50%] justify-start">
 
 
-                        <div className="flex flex-col">
-                            <p>How did you hear about doses?</p>
-                            <div className="flex gap-3">
-                                <input type="radio" onChange={handleChange} name="heardThrough" id="instagram" value={'instagram'} required />
-                                <label htmlFor="">Instagram</label>
-                            </div>
-                            <div className="flex gap-3">
-
-                                <input type="radio" name="heardThrough" id="x" onChange={handleChange} value={'x'} required />
-                                <label htmlFor="">X (Twitter)</label>
-                            </div>
-                            <div className="flex gap-3">
-
-                                <input type="radio" onChange={handleChange} value={'facebook'} name="heardThrough" id="facebook" required />
-                                <label htmlFor="">Facebook</label>
-                            </div>
-                            <div className="flex gap-3">
-
-                                <input type="radio" onChange={handleChange} value={'whatsapp'} name="heardThrough" id="whatsapp" required />
-                                <label htmlFor="">Whatsapp</label>
-                            </div>
-                            <div className="flex gap-3">
-
-                                <input type="radio" onChange={handleChange} value={'fliers'} name="heardThrough" id="fliers" required />
-                                <label htmlFor="">Hand Fliers</label>
-                            </div>
-                            <div className="flex gap-3">
-
-                                <input type="radio" onChange={handleChange} value={'jingles'} name="heardThrough" id="jingles" required />
-                                <label htmlFor="">Radio Jingles</label>
-                            </div>
-                            <div className="flex gap-3">
-
-                                <input type="radio" onChange={handleChange} value={'other'} name="heardThrough" id="other" required />
-                                <label htmlFor="">Other</label>
-                            </div>
+                        <p>Are you a member of Daystar?</p>
+                        <div className="flex gap-3">
+                            <input
+                                type="radio"
+                                name="daystarMember"
+                                id="yes"
+                                onChange={handleChange}
+                                value={true}
+                                required />
+                            <label htmlFor="">Yes</label>
                         </div>
-                        <div className="flex justify-center items-center w-[50%]">
-
-                            <button type='submit' className='w-100% bg-slate-950 text-slate-50 py-4 sm:px-20 px-10 sm:text-2xl'>REGISTER</button>
+                        <div className="flex gap-3">
+                            <input
+                                type="radio"
+                                name="daystarMember"
+                                id="no"
+                                onChange={handleChange}
+                                value={false}
+                                required />
+                            <label htmlFor="">No</label>
                         </div>
                     </div>
+                    {/* </div> */}
+
+                    {/* <div className="flex justify-between gap-4"> */}
+
+
+                    <div className="flex flex-col">
+                        <p>How did you hear about doses?</p>
+                        <div className="flex gap-3">
+                            <input type="radio" onChange={handleChange} name="heardThrough" id="instagram" value={'instagram'} required />
+                            <label htmlFor="">Instagram</label>
+                        </div>
+                        <div className="flex gap-3">
+
+                            <input type="radio" name="heardThrough" id="x" onChange={handleChange} value={'x'} required />
+                            <label htmlFor="">X (Twitter)</label>
+                        </div>
+                        <div className="flex gap-3">
+
+                            <input type="radio" onChange={handleChange} value={'facebook'} name="heardThrough" id="facebook" required />
+                            <label htmlFor="">Facebook</label>
+                        </div>
+                        <div className="flex gap-3">
+
+                            <input type="radio" onChange={handleChange} value={'whatsapp'} name="heardThrough" id="whatsapp" required />
+                            <label htmlFor="">Whatsapp</label>
+                        </div>
+                        <div className="flex gap-3">
+
+                            <input type="radio" onChange={handleChange} value={'fliers'} name="heardThrough" id="fliers" required />
+                            <label htmlFor="">Hand Fliers</label>
+                        </div>
+                        <div className="flex gap-3">
+
+                            <input type="radio" onChange={handleChange} value={'jingles'} name="heardThrough" id="jingles" required />
+                            <label htmlFor="">Radio Jingles</label>
+                        </div>
+                        <div className="flex gap-3">
+
+                            <input type="radio" onChange={handleChange} value={'other'} name="heardThrough" id="other" required />
+                            <label htmlFor="">Other</label>
+                        </div>
+                    </div>
+                    <div className="flex justify-center items-center w-[100%]">
+
+                        <button type='submit' className='w-100% bg-slate-950 hover:bg-slate-50 hover:text-slate-950 text-slate-50 py-4 sm:px-20 px-10 sm:text-2xl'>REGISTER</button>
+                    </div>
+                    {/* </div>/ */}
                 </form>
             </div>
 
