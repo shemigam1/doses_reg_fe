@@ -6,7 +6,7 @@ function App() {
   return (
 
     <>
-      <main className='flex flex-col justify-center items-center'>
+      <main className='flex flex-col justify-center items-center overflow-x-hidden'>
         <section className='h-[100vh]'>
           <nav className='h-[10vh] w-[100vw] flex justify-evenly items-center bg-slate-950 text-white'>
             <div className=" hover:bg-gray-50 hover:text-slate-950"><button onClick={() => setOpen(true)}>Get tickets!</button></div>
@@ -27,7 +27,7 @@ function App() {
         </section>
         <Register open={open} onClose={() => setOpen(false)} />
 
-        <section className='h-[85vh] sm:h-[100vh] px-8 sm:w-[75%] flex flex-col items-center justify-center gap-10' id='about'>
+        <section className='h-[85vh] sm:h-[100vh] sm:w-[55%] flex flex-col items-center justify-center gap-10' id='about'>
           <div className="flex flex-col sm:flex-row gap-4 h-[25%] min-h-56">
             <p className='text-3xl'>What is DOSES?</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id iure, dolorem delectus veritatis ullam nemo, ducimus tempora dolores fugit reprehenderit, doloribus modi facere praesentium impedit ut laudantium. Ipsa, dolores modi?</p>
