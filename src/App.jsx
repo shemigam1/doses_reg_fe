@@ -27,17 +27,34 @@ function App() {
         </section>
         <Register open={open} onClose={() => setOpen(false)} />
 
-        <section className='h-[85vh] sm:h-[100vh] px-8 sm:px-0 sm:w-[55%] flex flex-col items-center justify-center gap-4' id='about'>
-          <div className="flex flex-col sm:flex-row gap-4 h-[15%] min-h-56">
+        <section className='h-[180vh] px-8 sm:px-0 sm:w-[55%] flex flex-col items-center justify-center gap-4' id='about'>
+          <div className="flex flex-col sm:flex-row gap-4 h-[25%] min-h-56">
             <p className='text-3xl'>What is DOSES?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id iure, dolorem delectus veritatis ullam nemo, ducimus tempora dolores fugit reprehenderit, doloribus modi facere praesentium impedit ut laudantium. Ipsa, dolores modi?</p>
+            <p>Doses Fest 2024 is an electrifying celebration designed to inspire, empower, and connect young people. This dynamic festival brings together the different young minds for a day of unforgettable experiences. With a perfect blend of music, art,  and the word of God.
+              To provide a platform for youth to explore  their potentials and God given talents while fostering meaningful connections that will propel them towards a brighter future.
+            </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row-reverse gap-4 h-[15%] min-h-56">
+
+          <div className="flex flex-col sm:flex-row-reverse gap-4 h-[25%] min-h-56">
+            <p className='text-3xl'>Why should you come to DOSES?</p>
+            <p>There will be Music performances, Rap, Visual art designs, skating competition, Fashion/drip check,  Dance, vibes and many moreeee
+              Come ready to get high with the most high.
+              <br />
+              <br />
+              Expect a whole day's Dose of Love, Joy, Peace, self control  and all things goodness!!!!
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 h-[25%] min-h-56">
             <p className='text-3xl'>Where is it happening?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, iusto quasi sunt nihil eius quam qui at nemo perferendis, molestias, nostrum fuga maxime. Tempora quam nisi porro natus asperiores soluta.</p>
-          </div>
+            <p>Freedom Park Old Prison Ground,1, Hospital Road, adjacent St' Nicholas Hospital, Lagos Island, Lagos
 
+              <br />
+              <br />
+              Be there by 11:00am sharp!.
+            </p>
+          </div>
           <div className="text-center"><button
             className='px-7 py-2 bg-slate-950 text-slate-50'
             onClick={() => setOpen(true)}>Get Tickets!</button>
