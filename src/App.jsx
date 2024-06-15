@@ -1,8 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Register from './components/Register';
 import Video from './components/Video';
 function App() {
 	const [open, setOpen] = useState(false);
+
+	useEffect(() => {
+		if (window.location.href.match(/netlify/i)) {
+			window.location.replace('https://dosesfest.com.ng');
+		}
+	}, []);
 
 	return (
 		<>
