@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <main className="flex flex-col justify-center items-center overflow-x-hidden">
+      <main className="flex flex-col justify-center items-center overflow-x-hidden overflow-y-auto">
         <section className="">
           <nav className="h-[10vh] w-[100vw] flex justify-evenly items-center bg-slate-950 text-white">
             <div className=" hover:bg-gray-50 hover:text-slate-950">
@@ -62,10 +62,10 @@ function App() {
           </div>
         </section>
         <section
-          className="h-[180vh] px-8 sm:px-0 sm:w-[55%] flex flex-col items-center justify-center gap-8"
+          className="h-[180vh] sm:h-[150vh] px-8 sm:px-0 sm:w-[55%] flex flex-col items-center justify-center gap-8"
           id="about"
         >
-          <div className="flex flex-col sm:flex-row gap-4 h-[40%] sm:h-[35%] min-h-90 sm:min-h-64">
+          <div className="flex flex-col justify-center sm:items-center sm:justify-normal sm:flex-row gap-4 h-[30%] sm:h-[25%] min-h-90 sm:min-h-64">
             <p className="text-3xl">What is DOSES?</p>
             <p>
               Doses Fest 2024 is an electrifying celebration designed to
@@ -78,7 +78,7 @@ function App() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row-reverse gap-4 h-[40%] sm:h-[35%] min-h-90 sm:min-h-64">
+          <div className="flex flex-col justify-center sm:items-center sm:justify-normal sm:flex-row-reverse gap-4 h-[25%] sm:h-[15%] min-h-90 sm:min-h-64">
             <p className="text-3xl">Why should you come to DOSES?</p>
             <p>
               There will be Music performances, Rap, Visual art designs, skating
@@ -93,7 +93,7 @@ function App() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 h-[40%] sm:h-[25%] min-h-56 sm:min-h-64">
+          <div className="flex flex-col justify-center sm:items-center sm:justify-normal sm:flex-row gap-4 h-[15%] sm:h-[15%] min-h-56 sm:min-h-64">
             <p className="text-3xl">Where is it happening?</p>
             <p>
               Freedom Park Old Prison Ground,1, Hospital Road, adjacent St
@@ -103,9 +103,9 @@ function App() {
               Be there by 2:00pm sharp!.
             </p>
           </div>
-          <div className="text-center h-[20%]">
+          <div className="flex justify-center items-center text-center h-[10%] w-[100%]">
             <button
-              className="px-7 py-2 bg-slate-950 text-slate-50 rounded-full"
+              className="px-7 py-2 bg-slate-950 text-slate-50 rounded-full h-[45%] w-[100%] sm:w-[60%] text-2xl"
               onClick={() => setOpen(true)}
             >
               Get Tickets!
