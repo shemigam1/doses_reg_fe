@@ -122,7 +122,7 @@ function App() {
         </section>
 
         <footer className="h-[15vh] w-[100%] flex flex-col justify-center items-center bg-slate-900 text-slate-50">
-          <p>doses logo</p>
+          <p className=' text-2xl font-bold'>Doses The Fest</p>
           <p>
             <small>© 2024 doses All rights reserved</small>
           </p>
