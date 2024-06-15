@@ -4,3 +4,35 @@
 html {
 	scroll-behavior: smooth;
 }
+
+.main-banner {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: url('https://res.cloudinary.com/dkn0vfgbg/image/upload/Doses/IMG_7347_clgvuq.jpg');
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-banner::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 1;
+}
+
+.main-banner-text {
+	position: relative;
+	z-index: 2;
+	color: white;
+	font-size: 2rem;
+	text-align: center;
+	padding: 20px;
+}

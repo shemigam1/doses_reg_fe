@@ -13,7 +13,7 @@ function App() {
 	return (
 		<>
 			<main className="flex flex-col justify-center items-center overflow-x-hidden">
-				<section className="h-[100vh]">
+				<section className="">
 					<nav className="h-[10vh] w-[100vw] flex justify-evenly items-center bg-slate-950 text-white">
 						<div className=" hover:bg-gray-50 hover:text-slate-950">
 							<button onClick={() => setOpen(true)}>Get tickets!</button>
@@ -26,17 +26,19 @@ function App() {
 						</div>
 					</nav>
 
-					<div className="h-[60vh] flex flex-col justify-center items-center">
-						<p className="text-7xl">DOSES</p>
-						<p>The most served FEST in Africa!</p>
+					<div className="h-[60vh] flex flex-col justify-center items-center main-banner">
+						<div className="main-banner-text">
+							<p className="text-7xl">DOSES</p>
+							<p>The most served FEST in Africa!</p>
+						</div>
 					</div>
 
 					{/* <Video /> */}
 
-					<img
+					{/* <img
 						src="https://res.cloudinary.com/dkn0vfgbg/image/upload/Doses/IMG_7347_clgvuq.jpg"
 						alt=""
-					/>
+					/> */}
 
 					<div className="text-center">
 						<button
