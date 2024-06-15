@@ -103,7 +103,7 @@ function App() {
               Be there by 2:00pm sharp!.
             </p>
           </div>
-          <div className="text-center">
+          <div className="text-center h-[20%]">
             <button
               className="px-7 py-2 bg-slate-950 text-slate-50 rounded-full"
               onClick={() => setOpen(true)}
@@ -111,14 +111,14 @@ function App() {
               Get Tickets!
             </button>
           </div>
-          <div
+          {/* <div
             id="contact"
             className="flex flex-col justify-center items-center h-[30%]"
           >
             <p>Contact Us for more information</p>
             <p>0800000000</p>
             <p>0800000000</p>
-          </div>
+          </div> */}
         </section>
 
         <footer className="h-[15vh] w-[100%] flex flex-col justify-center items-center bg-slate-900 text-slate-50">
