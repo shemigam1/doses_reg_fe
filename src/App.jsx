@@ -21,9 +21,9 @@ function App() {
             <div className="">
               <a href="#about">About</a>
             </div>
-            <div className="">
+            {/* <div className="">
               <a href="#contact">Contact</a>
-            </div>
+            </div> */}
           </nav>
 
           <div className="h-[60vh] flex flex-col justify-center items-center main-banner">
