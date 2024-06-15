@@ -36,3 +36,9 @@ html {
 	text-align: center;
 	padding: 20px;
 }
+
+.doses-header {
+	font-family: "Borel", cursive;
+	font-weight: 700;
+	font-style: normal;
+}

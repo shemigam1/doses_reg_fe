@@ -29,8 +29,8 @@ function App() {
           <div className="h-[60vh] flex flex-col justify-center items-center main-banner">
             <div className="main-banner-text h-[100%] flex flex-col justify-evenly">
 
-              <p className="text-7xl">DOSES</p>
-              <p>The most served FEST in Africa!</p>
+              <p className="text-8xl doses-header">Doses</p>
+              <p className=''>The most served FEST in Africa!</p>
               <div className="text-center">
                 <button
                   className="px-7 py-2 bg-slate-950 text-slate-50 rounded-full border border-slate-100"
