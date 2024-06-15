@@ -33,7 +33,7 @@ function App() {
               <p>The most served FEST in Africa!</p>
               <div className="text-center">
                 <button
-                  className="px-7 py-2 bg-slate-950 text-slate-50 rounded-full"
+                  className="px-7 py-2 bg-slate-950 text-slate-50 rounded-full border border-slate-100"
                   onClick={() => setOpen(true)}
                 >
                   Get Tickets!
