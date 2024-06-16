@@ -303,7 +303,7 @@ function Register({ open, onClose }) {
 								name="heardThrough"
 								id="x"
 								onChange={handleChange}
-								value={'x'}
+								value={'x(twitter)'}
 								required
 							/>
 							<label htmlFor="">X (Twitter)</label>
@@ -334,7 +334,7 @@ function Register({ open, onClose }) {
 							<input
 								type="radio"
 								onChange={handleChange}
-								value={'fliers'}
+								value={'flier'}
 								name="heardThrough"
 								id="fliers"
 								required
@@ -345,7 +345,7 @@ function Register({ open, onClose }) {
 							<input
 								type="radio"
 								onChange={handleChange}
-								value={'jingles'}
+								value={'radio_jingle'}
 								name="heardThrough"
 								id="jingles"
 								required
