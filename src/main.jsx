@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
 
-if (window.location.href.match(/localhost/i)) {
+if (window.location.href.match(/netlify/i)) {
 	window.location.replace('https://dosesfest.com.ng');
 }
 
