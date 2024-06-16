@@ -9,7 +9,7 @@ function App() {
       <main className="flex flex-col justify-center items-center overflow-x-hidden overflow-y-auto">
         <section className="">
           <nav className="h-[10vh] w-[100vw] flex justify-evenly items-center bg-slate-950 text-white">
-            <div className=" hover:bg-gray-50 hover:text-slate-950 text-2xl">
+            <div className="text-2xl">
               <button onClick={() => setOpen(true)}>Get tickets!</button>
             </div>
             <div className="">
