@@ -163,7 +163,7 @@ function Register({ open, onClose }) {
 							</option>
 							<option value="21-25">21 - 25 years</option>
 							<option value="26-35">26 - 35 years</option>
-							<option value="35+">35 years and above</option>
+							<option value="36-above">35 years and above</option>
 						</select>
 					</div>
 					{/* </div> */}
