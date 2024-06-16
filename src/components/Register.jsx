@@ -89,15 +89,17 @@ function Register({ open, onClose }) {
 		<section
 			onClick={onClose}
 			className={`fixed inset-0 flex justify-center
-            items-center transition-colors ${open ? 'visible bg-black/20 z-10' : 'invisible'
-				}`}
-		// style={{ position: 'relative' }}
+            items-center transition-colors ${
+							open ? 'visible bg-black/20 z-10' : 'invisible'
+						}`}
+			// style={{ position: 'relative' }}
 		>
 			<div
 				onClick={(e) => e.stopPropagation()}
 				className={`bg-white rounded-xl shadow p-6 overflow-auto max-h-[90vh] 
-                transition-all ${open ? 'scale-100 opacity-100' : 'scale-125 opacity-0'
-					}
+                transition-all ${
+									open ? 'scale-100 opacity-100' : 'scale-125 opacity-0'
+								}
                   w-[90vw] sm:w-[60vw]`}
 			>
 				<div
@@ -354,7 +356,7 @@ function Register({ open, onClose }) {
 							<input
 								type="radio"
 								onChange={handleChange}
-								value={'other'}
+								value={'others'}
 								name="heardThrough"
 								id="other"
 								required
