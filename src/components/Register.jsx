@@ -163,7 +163,7 @@ function Register({ open, onClose }) {
 							</option>
 							<option value="21-25">21 - 25 years</option>
 							<option value="26-35">26 - 35 years</option>
-							<option value="35+">35 years and above</option>
+							<option value="36-above">35 years and above</option>
 						</select>
 					</div>
 					{/* </div> */}
@@ -303,7 +303,7 @@ function Register({ open, onClose }) {
 								name="heardThrough"
 								id="x"
 								onChange={handleChange}
-								value={'x'}
+								value={'x(twitter)'}
 								required
 							/>
 							<label htmlFor="">X (Twitter)</label>
@@ -334,7 +334,7 @@ function Register({ open, onClose }) {
 							<input
 								type="radio"
 								onChange={handleChange}
-								value={'fliers'}
+								value={'flier'}
 								name="heardThrough"
 								id="fliers"
 								required
@@ -345,7 +345,7 @@ function Register({ open, onClose }) {
 							<input
 								type="radio"
 								onChange={handleChange}
-								value={'jingles'}
+								value={'radio_jingle'}
 								name="heardThrough"
 								id="jingles"
 								required
