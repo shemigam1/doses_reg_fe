@@ -42,8 +42,8 @@ function App() {
         </section>
         <Register open={open} onClose={() => setOpen(false)} />
 
-        <section className="w-[100%] h-[70vh] flex justify-center items-center">
-          <div className=" w-[90%] sm:w-[50%] h-[80%]">
+        <section className="w-[100%] h-[70vh] flex justify-center items-center bg-slate-950">
+          <div className=" w-[90%] sm:w-[50%] h-[80%] ">
             <Video />
           </div>
         </section>
