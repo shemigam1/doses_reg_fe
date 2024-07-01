@@ -1,0 +1,56 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url('https://res.cloudinary.com/dkn0vfgbg/image/upload/v1718466147/Doses/IMG_7347_clgvuq.jpg')
+			no-repeat center center fixed;
+	background-size: cover;
+}
+.container {
+	max-width: 600px;
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.7);
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+h1 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+p {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+a.button {
+	display: inline-block;
+	padding: 15px 30px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #ff6f61;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+a.button:hover {
+	background-color: #ff4a3d;
+}
+@media (max-width: 600px) {
+	h1 {
+		font-size: 28px;
+	}
+	p {
+		font-size: 16px;
+	}
+	a.button {
+		padding: 12px 25px;
+		font-size: 14px;
+	}
+}
